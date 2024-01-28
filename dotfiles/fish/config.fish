@@ -6,3 +6,6 @@ alias l 'exa -la --icons'
 # init zoxide and z shortcut
 alias z='zoxide'
 z init fish --hook prompt | source
+
+# file explorer ranger
+alias r='ranger'

@@ -23,7 +23,7 @@ sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $cur
 
 packages=(
   fish tilix # fish shell, tilix commandline
-  mc # mc (midnight commander, file explorer in commandline)
+  ranger # (file explorer in commandline)
   exa nerd-fonts zoxide # exa (ls replacement), nerd-fonts terminal symbols, zoxide (cd replacement)
   neofetch lolcat sl # fun
   gnome-tweaks gnome-shell-extensions
