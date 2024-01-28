@@ -13,7 +13,7 @@ pacman -S --needed --noconfirm base-devel
 su -c "git clone https://aur.archlinux.org/yay.git" "$current_user"
 
 cd yay
-sudo -u $current_user makepkg -sii
+sudo -u $current_user makepkg -sii --noconfirm
 
 cd ..
 rm -r yay
@@ -40,7 +40,7 @@ aurpackages=(
 sudo -u $current_user yay -S "${aurpackages[@]}" --noconfirm
 
 chmod +x ./gnome-extensions.sh
-su -c ./gnome-extensions.sh $current_user
+sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" ./gnome-extensions.sh
 
 chmod +x ./preferences.sh
 sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" ./preferences.sh

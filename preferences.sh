@@ -9,7 +9,8 @@ chsh -s $(which fish)
 fish -c 'set -U fish_greeting ""'
 
 # neofetch
-cp ./dotfiles/neofetchconfig.conf ~/.config/neofetch/config.conf
+mkdir ~/.config/neofetch
+cp ./dotfiles/neofetch/config.conf ~/.config/neofetch/config.conf
 
 # and add to fishshell
 cp ./dotfiles/fish/config.fish ~/.config/fish/config.fish
@@ -25,7 +26,7 @@ dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-center "@a
 dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-one-third-left "@as []"
 dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-one-third-right "@as []"
 dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-two-third-left "@as []"
-dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-two-third-left "@as []"
+dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-two-third-right "@as []"
 
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Control><Alt>t'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'tilix'"
