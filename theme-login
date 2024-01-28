@@ -7,7 +7,9 @@ sudo cp /usr/share/backgrounds/gnome/background.png ./background.png
 
 mv ./assets/* ./
 
-mv $cwd/gnome-shell-theme-gresource.xml ./
+cp $cwd/gnome/gnome-shell-theme-gresource.xml ./
+
+cp $cwd/gnome/gnome-shell.cs ./
 
 glib-compile-resources ./gnome-shell-theme.gresource.xml
 cp ./gnome-shell-theme.gresource /usr/share/gnome-shell/
