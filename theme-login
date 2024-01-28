@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# set login theme
+cwd=$(eval pwd)
+cd /usr/share/themes/Catppuccin-Mocha-Standard-Mauve-Dark/gnome-shell/
+sudo cp /usr/share/backgrounds/gnome/background.png ./background.png
+
+mv ./assets/* ./
+
+mv $cwd/gnome-shell-theme-gresource.xml ./
+
+glib-compile-resources ./gnome-shell-theme.gresource.xml
+cp ./gnome-shell-theme.gresource /usr/share/gnome-shell/
+cd $cwd

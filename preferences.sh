@@ -9,17 +9,10 @@ chsh -s $(which fish)
 fish -c 'set -U fish_greeting ""'
 
 # neofetch
-wget -O ~/.config/neofetch/config.conf https://raw.githubusercontent.com/chick2d/neofetch-themes/main/normal/acenoster.conf
+cp ./dotfiles/neofetchconfig.conf ~/.config/neofetch/config.conf
+
 # and add to fishshell
-echo "neofetch | lolcat -F 0.05" >> ~/.config/fish/config.fish
-
-# exa viewer with l shortcut
-echo "alias l 'exa -la --icons'" >> ~/.config/fish/config.fish
-
-# init zoxide and z shortcut
-echo -e "eval (zoxide init fish --hook prompt)\nalias z='zoxide'\nz init fish | source" >> ~/.config/fish/config.fish
-
-
+cp ./dotfiles/fish/config.fish ~/.config/fish/config.fish
 
 # display
 gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
