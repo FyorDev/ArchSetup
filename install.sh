@@ -31,8 +31,6 @@ packages=(
 )
 pacman -S "${packages[@]}" --noconfirm
 
-pacman -R gnome-console --noconfirm # ew go away
-
 aurpackages=(
   catppuccin-gtk-theme-mocha # THEME
 )
@@ -46,3 +44,5 @@ sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $cur
 
 chmod +x ./theme.sh
 source theme.sh
+
+pacman -R gnome-console --noconfirm # ew go away
