@@ -1,14 +1,13 @@
 #!/bin/bash
 
-array=(
-    19   # user-themes
-    4451 # logo-menu
-    1514 # rounded-corners
-    1460 # vitals
-    4481 # forge
+extensions=(
+    forge@jmmaranan.com
+    logomenu@aryan_k
+    Rounded_Corners@lennart-k
+    user-theme@gnome-shell-extensions.gcampax.github.com
+    Vitals@CoreCoding.com
 )
-
-for i in "${array[@]}"
+for i in "${extensions[@]}"
 do
-    gnome-shell-extension-installer $i --yes
+    busctl --user call org.gnome.Shell.Extensions /org/gnome/Shell/Extensions org.gnome.Shell.Extensions InstallRemoteExtension s ${i}
 done

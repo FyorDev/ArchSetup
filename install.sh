@@ -35,7 +35,6 @@ pacman -R gnome-console --noconfirm # ew go away
 
 aurpackages=(
   catppuccin-gtk-theme-mocha # THEME
-  gnome-shell-extension-installer
 )
 sudo -u $current_user yay -S "${aurpackages[@]}" --noconfirm
 
@@ -44,3 +43,6 @@ sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $cur
 
 chmod +x ./preferences.sh
 sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" ./preferences.sh
+
+chmod +x ./theme.sh
+source theme.sh
