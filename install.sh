@@ -8,15 +8,8 @@ fi
 # Get the non-root username
 current_user=$(logname)
 
-pacman -S --needed --noconfirm base-devel
-
-su -c "git clone https://aur.archlinux.org/yay.git" "$current_user"
-
-cd yay
-sudo -u $current_user makepkg -sii --noconfirm
-
-cd ..
-rm -r yay
+chmod +x ./yay.sh
+source yay.sh
 
 chmod +x ./gnome-bloat-folder.sh
 sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" ./gnome-bloat-folder.sh
