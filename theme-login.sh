@@ -9,7 +9,7 @@ mv ./assets/* ./
 
 cp $cwd/gnome/gnome-shell-theme.gresource.xml ./
 
-cp $cwd/gnome/gnome-shell.css ./
+echo -e "\n#lockDialogGroup {\n  background: url(background.png);\n}" >> gnome-shell.css
 
 glib-compile-resources ./gnome-shell-theme.gresource.xml
 cp ./gnome-shell-theme.gresource /usr/share/gnome-shell/
