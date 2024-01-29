@@ -3,6 +3,9 @@
 # keyboard
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl')]"
 
+# begone terminal bell
+dconf write /org/gnome/desktop/sound/event-sounds "false"
+
 # set fishshell
 
 chsh -s $(which fish)
