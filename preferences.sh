@@ -8,6 +8,10 @@ gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl')
 chsh -s $(which fish)
 fish -c 'set -U fish_greeting ""'
 
+# ohmyfish with git aware bobthefish
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+omf install bobthefish
+
 # neofetch
 mkdir ~/.config/neofetch
 cp ./dotfiles/neofetch/config.conf ~/.config/neofetch/config.conf
