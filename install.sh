@@ -13,7 +13,7 @@ current_user=$(logname)
 sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" ./gnome-bloat-folder.sh
 
 packages=(
-  fish tilix # fish shell, tilix commandline
+  fish tilix man # fish shell, tilix commandline
   ranger # (file explorer in commandline)
   eza nerd-fonts zoxide # exa (ls replacement), nerd-fonts terminal symbols, zoxide (cd replacement)
   neofetch lolcat sl # fun
