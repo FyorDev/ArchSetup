@@ -27,7 +27,8 @@ mkdir ~/.config/neofetch
 cp ./dotfiles/neofetch/config.conf ~/.config/neofetch/config.conf
 
 # and add to fishshell
-cp ./dotfiles/fish/config.fish ~/.config/fish/config.fish
+cp ./dotfiles/fish/config.fish ~/.config/fish/
+cp ./dotfiles/fish/fish_variables ~/.config/fish/
 
 # display
 gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"

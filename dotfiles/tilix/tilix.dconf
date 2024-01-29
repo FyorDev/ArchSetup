@@ -3,11 +3,11 @@ theme-variant='system'
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 background-color='#1E1E2E'
-background-transparency-percent=10
+background-transparency-percent=15
 badge-color='#AC7EA8'
 badge-color-set=false
 bold-color-set=false
-bold-is-bright=true
+bold-is-bright=false
 cursor-background-color='#F5E0DC'
 cursor-colors-set=true
 cursor-foreground-color='#1E1E2E'
@@ -18,6 +18,6 @@ foreground-color='#CDD6F4'
 highlight-background-color='#F5E0DC'
 highlight-colors-set=true
 highlight-foreground-color='#1E1E2E'
-palette=['#45475A', '#F38BA8', '#A6E3A1', '#F9E2AF', '#89B4FA', '#F5C2E7', '#94E2D5', '#BAC2DE', '#585B70', '#F38BA8', '#A6E3A1', '#F9E2AF', '#89B4FA', '#F5C2E7', '#94E2D5', '#A6ADC8']
+palette=['#45475A', '#F38BA8', '#A6E3A1', '#FAB387', '#89B4FA', '#CBA7F7', '#94E2D5', '#BAC2DE', '#6C7086', '#EBA0aC', '#94E2D5', '#F9E2AF', '#B4BEFE', '#F5C2E7', '#89DCEB', '#A6ADC8']
 use-theme-colors=false
 visible-name='Default'
