@@ -1,7 +1,7 @@
 neofetch
 
 # exa viewer with l shortcut
-alias l 'exa -la --icons'
+alias l 'exa -laH --icons --git --group-directories-first --total-size --time-style=long-iso'
 
 # init zoxide and z shortcut
 alias z='zoxide'
