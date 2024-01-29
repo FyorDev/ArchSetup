@@ -9,8 +9,18 @@ chsh -s $(which fish)
 fish -c 'set -U fish_greeting ""'
 
 # ohmyfish with git aware bobthefish
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-omf install bobthefish
+cwd=$(eval pwd)
+cd /tmp
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > oh-my-fish-install
+fish oh-my-fish-install --noninteractive
+rm ./oh-my-fish-installi
+
+fish -c "omf install bobthefish"
+cd $cwd
+echo "fish stuff completed"
+
+# tilix theme
+dconf load /com/gexperts/Tilix/ < ./dotfiles/tilix/tilix.dconf
 
 # neofetch
 mkdir ~/.config/neofetch
