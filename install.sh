@@ -8,10 +8,8 @@ fi
 # Get the non-root username
 current_user=$(logname)
 
-chmod +x ./yay.sh
-source yay.sh
+./yay.sh
 
-chmod +x ./gnome-bloat-folder.sh
 sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" ./gnome-bloat-folder.sh
 
 packages=(
@@ -29,13 +27,10 @@ aurpackages=(
 )
 sudo -u $current_user yay -S "${aurpackages[@]}" --noconfirm
 
-chmod +x ./gnome-extensions.sh
 sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" ./gnome-extensions.sh
 
-chmod +x ./preferences.sh
 sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" ./preferences.sh
 
-chmod +x ./theme.sh
-source theme.sh
+./theme.sh
 
 pacman -R gnome-console --noconfirm # ew go away

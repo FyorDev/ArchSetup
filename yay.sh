@@ -1,5 +1,6 @@
 #!/bin/bash
 
+current_user=$(logname)
 cwd=$(eval pwd)
 
 cd /tmp
