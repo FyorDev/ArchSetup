@@ -9,13 +9,14 @@ fi
 current_user=$(logname)
 
 packages=(
-  firefox
-  keepassxc
+  firefox opera
+  keepassxc # password manager
+  syncthing # p2p file synchronization
 )
 pacman -S "${packages[@]}" --noconfirm
 
 aurpackages=(
-  keepass-natmsg
+  keepass-natmsg # password manager available for browsers
 )
 sudo -u $current_user yay -S "${aurpackages[@]}" --noconfirm
 
