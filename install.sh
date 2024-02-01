@@ -8,6 +8,8 @@ fi
 # Get the non-root username
 current_user=$(logname)
 
+pacman -S git wget --noconfiirm # prerequisites
+
 ./yay.sh
 
 sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" ./gnome-bloat-folder.sh
