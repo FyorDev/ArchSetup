@@ -38,14 +38,6 @@ gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffe
 
 # TODO: set to 125%? or ask user what percentage to set it to
 
-# CTRL+ALT+T terminal shortcut
-# remove conflicting forge shortcuts
-dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-center "@as []"
-dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-one-third-left "@as []"
-dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-one-third-right "@as []"
-dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-two-third-left "@as []"
-dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-two-third-right "@as []"
-
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Control><Alt>t'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'tilix'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'terminal'"
