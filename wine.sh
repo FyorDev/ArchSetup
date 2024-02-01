@@ -9,5 +9,6 @@ sudo sed -i ':a;N;$!ba;s@#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist\n
 packages=(
   wine
   wine-mono
+  winetricks
 )
 pacman -S "${packages[@]}" --noconfirm
