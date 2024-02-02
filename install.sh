@@ -11,7 +11,14 @@ else
     echo "Error: Unable to ping aur.archlinux.org. Exiting."
     exit 1
 fi
-# TODO: ensure update
+
+if sudo pacman -Syu --noconfirm; then
+    echo "System updated successfully. Proceeding with the script."
+else
+    echo "Error: Unable to update the system with pacman -Syu. Exiting."
+    exit 1
+fi
+
 ./scripts/setup/setup.sh
 
 ./scripts/gnome/gnome.sh
