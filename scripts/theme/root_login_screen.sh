@@ -7,7 +7,7 @@ sudo cp /usr/share/backgrounds/gnome/background.png ./background.png
 
 mv ./assets/* ./
 
-cp $cwd/gnome/gnome-shell-theme.gresource.xml ./
+cp $cwd/data/gnome/gnome-shell-theme.gresource.xml ./
 
 echo -e "\n#lockDialogGroup {\n  background: url(background.png);\n}" >> gnome-shell.css
 

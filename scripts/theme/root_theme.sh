@@ -16,6 +16,3 @@ cp -r /usr/share/themes/Catppuccin-Mocha-Standard-Mauve-Dark/gtk-4.0 $user_home/
 
 # places earlier in sudo part
 
-./theme-login.sh
-
-sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" ./theme-user.sh

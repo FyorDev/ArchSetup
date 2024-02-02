@@ -23,7 +23,7 @@ cd $cwd
 echo "fish stuff completed"
 
 # tilix theme
-dconf load /com/gexperts/Tilix/ < ./dotfiles/tilix/tilix.dconf
+dconf load /com/gexperts/Tilix/ < ./data/tilix/tilix.dconf
 
 # neofetch
 mkdir ~/.config/neofetch
