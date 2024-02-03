@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# forge no window highlight
+dconf write /org/gnome/shell/extensions/forge/focus-border-toggle "false"
+
 # keyboard
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl')]"
 
