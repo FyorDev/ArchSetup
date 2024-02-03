@@ -3,6 +3,13 @@
 # forge no window highlight
 dconf write /org/gnome/shell/extensions/forge/focus-border-toggle "false"
 
+# remove to clear up CTRL+ALT+T shortcut, used for terminal
+dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-center "@as []"
+dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-one-third-left "@as []"
+dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-one-third-right "@as []"
+dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-two-third-left "@as []"
+dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-two-third-right "@as []"
+
 # keyboard
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl')]"
 
