@@ -3,6 +3,9 @@ neofetch
 # exa viewer with l shortcut
 alias l 'exa -laH --icons --git --group-directories-first --time-style=long-iso'
 
+# bat cat replacement
+alias bat 'bat --paging=never --theme ansi'
+
 # init zoxide and z shortcut
 alias z='zoxide'
 z init fish --hook prompt | source
