@@ -49,10 +49,6 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[
 # minimize button on windows
 dconf write /org/gnome/desktop/wm/preferences/button-layout "'appmenu:minimize,close'"
 
-# midnight commander
-mkdir $HOME/.config/mc/
-echo -e '\n[Midnight-Commander]\nskin=modarcon16-defbg' >> $HOME/.config/mc/ini
-
 # arch logo
 dconf write /org/gnome/shell/extensions/Logo-menu/menu-button-icon-image 6
 dconf write /org/gnome/shell/extensions/Logo-menu/menu-button-icon-size 30
