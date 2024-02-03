@@ -14,10 +14,3 @@ done
 
 # default included, allows multiple instances to be launched via the menu
 gnome-extensions enable launch-new-instance@gnome-shell-extensions.gcampax.github.com
-
-# remove to clear up CTRL+ALT+T shortcut, used for terminal
-dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-center "@as []"
-dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-one-third-left "@as []"
-dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-one-third-right "@as []"
-dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-two-third-left "@as []"
-dconf write /org/gnome/shell/extensions/forge/keybindings/window-snap-two-third-right "@as []"
