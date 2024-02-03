@@ -44,6 +44,11 @@ cp ./dotfiles/fish/config.fish ~/.config/fish/
 cp ./dotfiles/fish/fish_variables ~/.config/fish/
 # git alias
 git config --global alias.l 'log --graph --pretty=format:\'%Cred%h%Creset -%C(yellow)%d%Creset %C(brightgreen)%s %C(dim blue)(%cr)%C(reset) %C(bold blue)<%an>%Creset\' --abbrev-commit --date=relative'
+git config --global core.editor "vim"
+git config --global alias.s 'status'
+git config --global alias.a 'add .'
+git config --global alias.c 'commit'
+git config --global alias.p 'push'
 
 # display
 gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
