@@ -13,6 +13,9 @@ packages=(
   obsidian
   rustup # drags in rustc and cargo
   rust-analyzer
+  virtualbox-host-modules-arch
+  virtualbox-guest-iso
+  virtualbox
 )
 pacman -S "${packages[@]}" --noconfirm
 
