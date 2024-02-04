@@ -10,11 +10,6 @@ packages=(
 )
 pacman -S "${packages[@]}" --noconfirm
 
-aurpackages=(
-  keepass-natmsg # password manager available for browsers
-)
-sudo -u $current_user yay -S "${aurpackages[@]}" --noconfirm
-
 # install Firefox addons
 # requiring user interaction
 
