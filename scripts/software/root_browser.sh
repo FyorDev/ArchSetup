@@ -41,6 +41,8 @@ wget https://addons.mozilla.org/firefox/downloads/file/4216633/ublock_origin-lat
 sudo -u $current_user firefox ublock_origin-latest.xpi
 wget https://addons.mozilla.org/firefox/downloads/file/4111257/remove_youtube_shorts-latest.xpi
 sudo -u $current_user firefox remove_youtube_shorts-latest.xpi
+wget https://addons.mozilla.org/firefox/downloads/file/4103800/simple_tab_groups-latest.xpi
+sudo -u $current_user firefox simple_tab_groups-latest.xpi
 
 cd $cwd
 rm -r /tmp/firefoxaddons
