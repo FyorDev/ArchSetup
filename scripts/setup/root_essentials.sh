@@ -4,7 +4,7 @@ current_user=$(logname)
 
 packages=(
   fish tilix man # fish shell, tilix commandline
-  vim neovim npm
+  vim
   ranger # (file explorer in commandline)
   eza zoxide bat # exa (ls replacement), zoxide (cd replacement), bat (cat replacement)
   nerd-fonts neofetch lolcat sl # fun, nerd-fonts terminal symbols

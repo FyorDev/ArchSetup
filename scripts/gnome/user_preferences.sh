@@ -50,9 +50,6 @@ git config --global alias.a 'add .'
 git config --global alias.c 'commit'
 git config --global alias.p 'push'
 
-# nvim NvChad
-git clone https://github.com/NvChad/NvChad.git ~/.config/nvim
-
 # display
 gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
 

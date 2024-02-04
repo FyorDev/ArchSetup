@@ -1,5 +1,24 @@
 #!/bin/bash
 
+usage() {
+    echo "Usage: $0 [-s]"
+    echo "  -s, Install ALL my software"
+    exit 1
+}
+
+# Parse command-line options
+while getopts ":s" opt; do
+  case $opt in
+    s)
+      run_software=true
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG"
+      usage
+      ;;
+  esac
+done
+
 if [ "$EUID" -ne 0 ]; then
     echo "Please run this script with sudo."
     exit 1
@@ -24,5 +43,9 @@ fi
 ./scripts/gnome/gnome.sh
 
 ./scripts/theme/theme.sh
+
+if [ "$run_software" = true ]; then
+  ./scripts/software/software.sh
+fi
 
 pacman -R gnome-console --noconfirm # ew go away
