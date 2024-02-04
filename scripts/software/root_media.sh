@@ -5,6 +5,7 @@ current_user=$(logname)
 packages=(
   obsidian
   krita
+  inkscape
   blender
   obs-studio
 )
