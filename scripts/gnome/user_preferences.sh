@@ -26,7 +26,7 @@ cwd=$(eval pwd)
 cd /tmp
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > oh-my-fish-install
 fish oh-my-fish-install --noninteractive
-rm ./oh-my-fish-installi
+rm ./oh-my-fish-install
 
 fish -c "omf install bobthefish"
 cd $cwd
