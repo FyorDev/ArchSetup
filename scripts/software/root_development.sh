@@ -10,12 +10,12 @@ packages=(
   postman-bin
   docker docker-compose
   godot
-  obsidian
   rustup # drags in rustc and cargo
   rust-analyzer
   virtualbox-host-modules-arch
   virtualbox-guest-iso
   virtualbox
+  qbittorrent
 )
 pacman -S "${packages[@]}" --noconfirm
 
