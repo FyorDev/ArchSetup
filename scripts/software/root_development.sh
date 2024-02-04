@@ -22,6 +22,7 @@ aurpackages=(
   jetbrains-toolbox
   imhex-bin
   postman-bin
+  docker-desktop
 )
 sudo -u $current_user yay -S "${aurpackages[@]}" --noconfirm
 
