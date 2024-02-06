@@ -38,6 +38,8 @@ wget https://addons.mozilla.org/firefox/downloads/file/4111257/remove_youtube_sh
 sudo -u $current_user firefox remove_youtube_shorts-latest.xpi
 wget https://addons.mozilla.org/firefox/downloads/file/4103800/simple_tab_groups-latest.xpi
 sudo -u $current_user firefox simple_tab_groups-latest.xpi
+wget https://addons.mozilla.org/firefox/downloads/file/4226958/styl_us-latest.xpi
+sudo -u $current_user firefox styl_us-latest.xpi
 
 cd $cwd
 rm -r /tmp/firefoxaddons
