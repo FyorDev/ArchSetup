@@ -4,11 +4,17 @@
 current_user=$(logname)
 
 packages=(
-  firefox opera
+  firefox
   keepassxc # password manager
   syncthing # p2p file synchronization
 )
 pacman -S "${packages[@]}" --noconfirm
+
+aurpackages=(
+  opera
+)
+sudo -u $current_user yay -S "${aurpackages[@]}" --noconfirm
+
 
 # install Firefox addons
 # requiring user interaction
