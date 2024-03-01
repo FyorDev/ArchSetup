@@ -15,6 +15,7 @@ packages=(
   virtualbox-guest-iso
   virtualbox
   qbittorrent
+  qmk
 )
 pacman -S "${packages[@]}" --noconfirm
 
