@@ -9,6 +9,7 @@ packages=(
   inkscape
   blender
   obs-studio
+  prusa-slicer
 )
 pacman -S "${packages[@]}" --noconfirm
 
