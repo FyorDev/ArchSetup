@@ -22,7 +22,7 @@ pacman -S "${packages[@]}" --noconfirm
 aurpackages=(
   jetbrains-toolbox
   imhex-bin
-  postman-bin
+  insomnium-bin
   docker-desktop
 )
 sudo -u $current_user yay -S "${aurpackages[@]}" --noconfirm
