@@ -39,6 +39,10 @@ dconf load /com/gexperts/Tilix/ < ./data/tilix/tilix.dconf
 mkdir ~/.config/neofetch
 cp ./dotfiles/neofetch/config.conf ~/.config/neofetch/config.conf
 
+# ranger
+mkdir ~/.config/ranger
+cp ./dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
+
 # and add to fishshell
 cp ./dotfiles/fish/config.fish ~/.config/fish/
 cp ./dotfiles/fish/fish_variables ~/.config/fish/
