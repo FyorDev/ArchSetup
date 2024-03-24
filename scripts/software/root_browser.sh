@@ -7,7 +7,7 @@ packages=(
   firefox
   keepassxc # password manager
   syncthing # p2p file synchronization
-  sigal-desktop
+  signal-desktop
 )
 pacman -S "${packages[@]}" --noconfirm
 
