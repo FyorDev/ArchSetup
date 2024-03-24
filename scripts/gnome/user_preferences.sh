@@ -42,6 +42,7 @@ cp ./dotfiles/neofetch/config.conf ~/.config/neofetch/config.conf
 # ranger
 mkdir ~/.config/ranger
 cp ./dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 
 # and add to fishshell
 cp ./dotfiles/fish/config.fish ~/.config/fish/
