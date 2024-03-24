@@ -30,6 +30,10 @@ function fish_user_key_bindings
     bind \co 'r ; commandline -f repaint'
 end
 
+# nvim as editor
+set -gx EDITOR nvim 
+set -gx GIT_EDITOR nvim
+
 # lazy no fish greeting ever
 function fish_greeting; end
 # theme
