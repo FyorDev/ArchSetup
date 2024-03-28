@@ -28,6 +28,7 @@ end
 
 function fish_user_key_bindings
     bind \co 'r ; commandline -f repaint'
+    bind \cn 'nvim'
 end
 
 # nvim as editor
