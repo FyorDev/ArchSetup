@@ -31,19 +31,17 @@ echo -e "\033[0m"
 sleep 2
 
 wget https://addons.mozilla.org/firefox/downloads/file/4218010/keepassxc_browser-latest.xpi  
-userdo firefox ./keepassxc_browser-latest.xpi
 wget https://addons.mozilla.org/firefox/downloads/file/3974897/gnome_shell_integration-latest.xpi
-userdo firefox ./gnome_shell_integration-latest.xpi
 wget https://addons.mozilla.org/firefox/downloads/file/3990325/catppuccin_mocha_mauve_git-latest.xpi
-userdo firefox catppuccin_mocha_mauve_git-latest.xpi
 wget https://addons.mozilla.org/firefox/downloads/file/4216633/ublock_origin-latest.xpi
-userdo firefox ublock_origin-latest.xpi
 wget https://addons.mozilla.org/firefox/downloads/file/4111257/remove_youtube_shorts-latest.xpi
-userdo firefox remove_youtube_shorts-latest.xpi
 wget https://addons.mozilla.org/firefox/downloads/file/4103800/simple_tab_groups-latest.xpi
-userdo firefox simple_tab_groups-latest.xpi
 wget https://addons.mozilla.org/firefox/downloads/file/4226958/styl_us-latest.xpi
-userdo firefox styl_us-latest.xpi
+
+for file in ./*
+do
+  userdo firefox "$file"
+done
 
 cd $cwd
 rm -r /tmp/firefoxaddons
