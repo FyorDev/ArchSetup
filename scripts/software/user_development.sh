@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # nvim NvChad
-git clone https://github.com/NvChad/NvChad.git ~/.config/nvim --depth 1
+git clone https://github.com/NvChad/starter ~/.config/nvim
 
 # setup rust
 rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
