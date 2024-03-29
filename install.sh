@@ -6,17 +6,12 @@ usage() {
     exit 1
 }
 
-# Parse command-line options
-while getopts ":s" opt; do
-  case $opt in
-    s)
-      run_software=true
-      ;;
-    \?)
-      echo "Invalid option: -$OPTARG"
-      usage
-      ;;
-  esac
+echo "Also install all software? (a lot)?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) run_software=true; break;;
+        No ) break;;
+    esac
 done
 
 if [ "$EUID" -ne 0 ]; then
