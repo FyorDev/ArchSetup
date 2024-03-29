@@ -49,10 +49,10 @@ pacman -S git wget --noconfirm # prerequisites
 source ./scripts/setup/root_yay.sh
 source ./scripts/setup/root_essentials.sh
 source ./scripts/setup/root_wine.sh
-userdo ./scripts/setup/user_bloat_app_folder.sh
 
-userdo ./scripts/gnome/user_extensions.sh
-userdo ./scripts/gnome/user_preferences.sh
+userdo ./scripts/gnome/bloat_app_folder.sh
+userdo ./scripts/gnome/extensions.sh
+userdo ./scripts/gnome/preferences.sh
 
 source ./scripts/theme/theme.sh
 source ./scripts/theme/theme_login.sh

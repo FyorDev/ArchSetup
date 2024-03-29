@@ -15,4 +15,4 @@ pacman -S "${packages[@]}" --noconfirm
 aurpackages=(
   catppuccin-gtk-theme-mocha # THEME
 )
-sudo -u $current_user yay -S "${aurpackages[@]}" --noconfirm
+userdo yay -S "${aurpackages[@]}" --noconfirm
