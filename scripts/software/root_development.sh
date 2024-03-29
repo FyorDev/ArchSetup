@@ -1,7 +1,5 @@
 #!/bin/bash
 
-current_user=$(logname)
-
 packages=(
   neovim
   lazygit # tui for git

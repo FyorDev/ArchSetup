@@ -1,8 +1,5 @@
 #!/bin/bash
 
-current_user=$(logname)
-user_home=$(eval echo ~$SUDO_USER)
-
 packages=(
   obsidian
   krita

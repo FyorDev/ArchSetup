@@ -1,9 +1,5 @@
 #!/bin/bash
 
-current_user=$(logname)
-
-cwd=$(eval pwd)
-
 cd /tmp
 pacman -S --needed --noconfirm base-devel git
 

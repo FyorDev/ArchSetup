@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # set login theme
-cwd=$(eval pwd)
 cd /usr/share/themes/Catppuccin-Mocha-Standard-Mauve-Dark/gnome-shell/
 sudo cp /usr/share/backgrounds/gnome/background.png ./background.png
 

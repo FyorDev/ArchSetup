@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# variables availabie in sourced scripts 
+current_user=$(logname)
+user_home=$(eval echo ~$SUDO_USER)
+cwd=$(eval pwd)
+
+# dbus matters for dconf
+function run_as_user() {
+    sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" $1
+}
+
 usage() {
     echo "Usage: $0 [-s]"
     echo "  -s, Install ALL my software"
@@ -33,14 +43,27 @@ else
     exit 1
 fi
 
-./scripts/setup/setup.sh
+# BEGIN SCRIPT
+pacman -S git wget --noconfirm # prerequisites
 
-./scripts/gnome/gnome.sh
+source ./scripts/setup/root_yay.sh
+source ./scripts/setup/root_essentials.sh
+source ./scripts/setup/root_wine.sh
+run_as_user ./scripts/setup/user_bloat_app_folder.sh
 
-./scripts/theme/theme.sh
+run_as_user ./scripts/gnome/user_extensions.sh
+run_as_user ./scripts/gnome/user_preferences.sh
+
+source ./scripts/theme/root_theme.sh
+source ./scripts/theme/root_login_screen.sh
+run_as_user ./scripts/theme/user_theme.sh
 
 if [ "$run_software" = true ]; then
-  ./scripts/software/software.sh
+  source ./scripts/software/root_browser.sh
+  source ./scripts/software/root_development.sh
+  source ./scripts/software/root_games.sh
+  source ./scripts/software/root_media.sh
+  run_as_user ./scripts/software/user_development.sh
 fi
 
 pacman -R gnome-console --noconfirm # ew go away

@@ -1,8 +1,5 @@
 #!/bin/bash
 
-current_user=$(logname)
-user_home=$(eval echo ~$SUDO_USER)
-
 # background
 mkdir $user_home/.local/share/backgrounds
 wget -O $user_home/.local/share/backgrounds/background.png "https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/pastel-car.png"

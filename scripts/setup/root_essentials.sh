@@ -1,7 +1,5 @@
 #!/bin/bash
 
-current_user=$(logname)
-
 packages=(
   ntfs-3g # the ntfs filesystem
   fish tilix man # fish shell, tilix commandline

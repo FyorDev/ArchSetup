@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Get the non-root username
-current_user=$(logname)
-
 packages=(
   firefox
   keepassxc # password manager
