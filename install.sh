@@ -6,8 +6,8 @@ user_home=$(eval echo ~$SUDO_USER)
 cwd=$(eval pwd)
 
 # dbus matters for dconf
-function run_as_user() {
-    sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" $1
+function userdo() {
+    sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" $*
 }
 
 usage() {
@@ -49,21 +49,19 @@ pacman -S git wget --noconfirm # prerequisites
 source ./scripts/setup/root_yay.sh
 source ./scripts/setup/root_essentials.sh
 source ./scripts/setup/root_wine.sh
-run_as_user ./scripts/setup/user_bloat_app_folder.sh
+userdo ./scripts/setup/user_bloat_app_folder.sh
 
-run_as_user ./scripts/gnome/user_extensions.sh
-run_as_user ./scripts/gnome/user_preferences.sh
+userdo ./scripts/gnome/user_extensions.sh
+userdo ./scripts/gnome/user_preferences.sh
 
-source ./scripts/theme/root_theme.sh
-source ./scripts/theme/root_login_screen.sh
-run_as_user ./scripts/theme/user_theme.sh
+source ./scripts/theme/theme.sh
+source ./scripts/theme/theme_login.sh
 
 if [ "$run_software" = true ]; then
-  source ./scripts/software/root_browser.sh
-  source ./scripts/software/root_development.sh
-  source ./scripts/software/root_games.sh
-  source ./scripts/software/root_media.sh
-  run_as_user ./scripts/software/user_development.sh
+  source ./scripts/software/browser.sh
+  source ./scripts/software/development.sh
+  source ./scripts/software/games.sh
+  source ./scripts/software/media.sh
 fi
 
 pacman -R gnome-console --noconfirm # ew go away
