@@ -1,7 +1,5 @@
 #!/bin/bash
 
-current_user=$(logname)
-
 packages=(
   ntfs-3g # the ntfs filesystem
   fish tilix man # fish shell, tilix commandline
@@ -17,4 +15,4 @@ pacman -S "${packages[@]}" --noconfirm
 aurpackages=(
   catppuccin-gtk-theme-mocha # THEME
 )
-sudo -u $current_user yay -S "${aurpackages[@]}" --noconfirm
+userdo yay -S "${aurpackages[@]}" --noconfirm

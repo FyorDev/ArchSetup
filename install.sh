@@ -1,22 +1,27 @@
 #!/bin/bash
 
+# variables availabie in sourced scripts 
+current_user=$(logname)
+user_home=$(eval echo ~$SUDO_USER)
+cwd=$(eval pwd)
+
+# dbus matters for dconf
+function userdo() {
+    sudo -u $current_user DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $current_user)/bus" $*
+}
+
 usage() {
     echo "Usage: $0 [-s]"
     echo "  -s, Install ALL my software"
     exit 1
 }
 
-# Parse command-line options
-while getopts ":s" opt; do
-  case $opt in
-    s)
-      run_software=true
-      ;;
-    \?)
-      echo "Invalid option: -$OPTARG"
-      usage
-      ;;
-  esac
+echo "Also install all software? (a lot)?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) run_software=true; break;;
+        No ) break;;
+    esac
 done
 
 if [ "$EUID" -ne 0 ]; then
@@ -38,14 +43,25 @@ else
     exit 1
 fi
 
-./scripts/setup/setup.sh
+# BEGIN SCRIPT
+pacman -S git wget --noconfirm # prerequisites
 
-./scripts/gnome/gnome.sh
+source ./scripts/setup/root_yay.sh
+source ./scripts/setup/root_essentials.sh
+source ./scripts/setup/root_wine.sh
 
-./scripts/theme/theme.sh
+userdo ./scripts/gnome/bloat_app_folder.sh
+userdo ./scripts/gnome/extensions.sh
+userdo ./scripts/gnome/preferences.sh
+
+source ./scripts/theme/theme.sh
+source ./scripts/theme/theme_login.sh
 
 if [ "$run_software" = true ]; then
-  ./scripts/software/software.sh
+  source ./scripts/software/browser.sh
+  source ./scripts/software/development.sh
+  source ./scripts/software/games.sh
+  source ./scripts/software/media.sh
 fi
 
 pacman -R gnome-console --noconfirm # ew go away

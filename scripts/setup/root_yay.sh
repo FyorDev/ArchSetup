@@ -1,16 +1,12 @@
 #!/bin/bash
 
-current_user=$(logname)
-
-cwd=$(eval pwd)
-
 cd /tmp
-pacman -S --needed --noconfirm base-devel git
 
-su -c "git clone https://aur.archlinux.org/yay.git" "$current_user"
+pacman -S --needed --noconfirm git base-devel
+userdo git clone https://aur.archlinux.org/yay.git
 
 cd yay
-sudo -u $current_user makepkg -sii --noconfirm
+userdo makepkg -si --noconfirm
 
 cd ..
 rm -r yay
