@@ -1,8 +1,8 @@
 neofetch
 
 # exa viewer with l shortcut
-alias l 'exa -laH --icons --git --group-directories-first --time-style=long-iso'
-alias lr 'exa --tree --icons --group-directories-first'
+alias l 'exa -laH --icons --git --group-directories-first --time-style=long-iso --hyperlink'
+alias lr 'exa --tree --icons --group-directories-first --hyperlink'
 # bat cat replacement
 alias bat 'bat --theme ansi'
 
