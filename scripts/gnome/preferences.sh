@@ -48,7 +48,7 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger
 cp ./dotfiles/fish/config.fish ~/.config/fish/
 cp ./dotfiles/fish/fish_variables ~/.config/fish/
 # git alias
-git config --global alias.l 'log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %C(brightgreen)%s %C(dim blue)(%cr)%C(reset) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --date=relative'
+git config --global alias.ls 'log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %C(brightgreen)%s %C(dim blue)(%cr)%C(reset) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --date=relative'
 git config --global alias.f 'fetch'
 git config --global alias.l 'pull'
 git config --global alias.s 'status'
