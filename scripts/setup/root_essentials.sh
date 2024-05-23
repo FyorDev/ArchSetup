@@ -2,7 +2,7 @@
 
 packages=(
   ntfs-3g # the ntfs filesystem
-  fish tilix man # fish shell, tilix commandline
+  fish tilix man rsync # fish shell, tilix commandline
   vim github-cli xclip
   ranger highlight # (file explorer in commandline)
   eza zoxide bat # exa (ls replacement), zoxide (cd replacement), bat (cat replacement)
